@@ -9,9 +9,6 @@ main_bp = Blueprint('main', __name__)
 
 @main_bp.route('/')
 def index():
-    print(Config.SQLALCHEMY_DATABASE_URI)
-    db.create_all()
-    db.session.commit()
     return render_template('index.html')
 
 

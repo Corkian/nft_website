@@ -8,6 +8,8 @@ main_bp = Blueprint('main', __name__)
 
 @main_bp.route('/')
 def index():
+    db.create_all()
+    db.session.commit()
     return render_template('index.html')
 
 

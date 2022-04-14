@@ -2,8 +2,8 @@ import os
 
 
 class Config:
-    SECRET_KEY = "mysecretkey"
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:Wingsgt13@localHost:5432/subscribers'
+    SECRET_KEY = os.environ.get('secret_key')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('database_uri')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 465

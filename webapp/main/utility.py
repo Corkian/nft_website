@@ -5,9 +5,9 @@ from webapp import mail
 
 
 def sendContactForm(result):
-    msg = Message("Contact Form GT Blog",
-                  sender='cosmin.un.13@gmail.com',
-                  recipients=["cosmin_un@yahoo.com"])
+    msg = Message("Contact Form GT",
+                  sender='info@generation-team.com',
+                  recipients=["info@generation-team.com"])
 
     msg.body = """
     Hello there,

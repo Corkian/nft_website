@@ -19,12 +19,13 @@ def contact():
         result['name'] = request.form['name']
         result['email'] = request.form['email'].replace(' ', '').lower()
         result['message'] = request.form['message']
-
         response = sendContactForm(result)
+        return "OK"
 
-        return render_template('contact.html', response=response)
+    else:
+        return render_template('index.html')
 
-    return render_template('contact.html')
+
 
 
 @main_bp.route("/subscribe", methods=['GET', 'POST'])

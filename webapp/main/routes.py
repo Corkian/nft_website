@@ -2,7 +2,6 @@ from flask import render_template, request, Blueprint
 from .utility import sendContactForm
 from webapp import db
 from webapp.db_models import Subscriber
-from webapp.config import Config
 
 main_bp = Blueprint('main', __name__)
 

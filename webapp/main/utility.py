@@ -12,14 +12,12 @@ def sendContactForm(result):
     msg.body = """
     Hello there,
 
-    You just received a contact form from GT Blog.
+    You just received a contact form from Generation Team.
 
     Name: {}
     Email: {}
     Message: {}
 
-    regards,
-    GT Blog 
     """.format(result['name'], result['email'], result['message'])
 
     mail.send(msg)
